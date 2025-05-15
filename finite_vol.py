@@ -43,7 +43,10 @@ def finite_vol(Delta_x, Delta_y, Delta_t, g, U, V, H, S_u, S_v):
     # [(HU)(HV) / H]_{i, j+1/2}^{n+1/2} = first component of \vec g_{i, j+1/2}^{n+1/2, Q}
     g_mid_yt_u = HU_mid_yt * HV_mid_yt / H_mid_yt
 
+    # [(HU)(HV) / H]_{i+1/2, j}^{n+1/2} = second component of \vec f_{i+1/2, j}^{n+1/2, Q}
     f_mid_xt_v = HU_mid_xt * HV_mid_xt / H_mid_xt
+
+    # [(HV^2) / H + gH^2 / 2]_{i, j+1/2}^{n+1/2} = second component of \vec g_{i, j+1/2}^{n+1/2, Q}
     g_mid_yt_v = HV_mid_yt * HV_mid_yt / H_mid_yt + g * (H_mid_yt**2) / 2
 
 # --- Finite Volume Step ---
