@@ -1,0 +1,1 @@
+check latex/gfd.pdf for the final report and some commentary on the code.
